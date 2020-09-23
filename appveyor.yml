@@ -18,7 +18,7 @@ build_script:
 
 on_success:
 - curl -s -o upload https://copilot.blackducksoftware.com/ci/appveyor/scripts/upload
-#- bash <(curl -s -L https://github.com/whitesource/fs-agent-distribution/raw/master/standAlone/wss_agent.sh) -apiKey  -product mytest -project  -d . 
+- bash upload
 - curl -s https://scripts.scantist.com/staging/scantist-bom-detect.jar --output scantist-bom-detect.jar
 - java -jar scantist-bom-detect.jar
 
