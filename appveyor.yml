@@ -4,7 +4,7 @@ before_build:
  - appveyor-retry dotnet restore -v Minimal
 build:
   verbosity: minimal
-script:
+build_script:
    # Download the latest version of WhiteSource FS Agent
     - curl -LJO https://github.com/whitesource/fs-agent-distribution/raw/master/standAlone/whitesource-fs-agent.jar
     # Download the default configuration file
