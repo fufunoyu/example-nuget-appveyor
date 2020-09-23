@@ -10,7 +10,7 @@ build_script:
     # Download the default configuration file
     - curl -LJO https://github.com/whitesource/fs-agent-distribution/raw/master/standAlone/whitesource-fs-agent.config
     # Replace the flags in the configuration to enable policy check
-    - cat whitesource-fs-agent.config | sed -e "s/checkPolicies=false/checkPolicies=true/; s/forceCheckAllDependencies=false/forceCheckAllDependencies=true/" > temp_file.config
+    - cat whitesource-fs-agent.config | sed -e "s/forceCheckAllDependencies=false/forceCheckAllDependencies=true/" > temp_file.config
     # Copy the new configuration file over the original file
     - mv temp_file.config whitesource-fs-agent.config
     # Run WhiteSource FS Agent
