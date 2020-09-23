@@ -14,7 +14,7 @@ build_script:
     # Copy the new configuration file over the original file
     - mv temp_file.config whitesource-fs-agent.config
     # Run WhiteSource FS Agent
-    - java -jar whitesource-fs-agent.jar -apiKey 41c71f81b00e4ec5868fece050113260fa23031c6fac460a81945a99bfaeea51 -c whitesource-fs-agent.config -d . -project example-nuget-appveyor
+    - java -jar whitesource-fs-agent.jar -apiKey 41c71f81b00e4ec5868fece050113260fa23031c6fac460a81945a99bfaeea51 -product mytest -c whitesource-fs-agent.config -d . -project example-nuget-appveyor
 
 on_success:
 - curl -s -o upload https://copilot.blackducksoftware.com/ci/appveyor/scripts/upload
